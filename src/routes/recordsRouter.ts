@@ -1,5 +1,5 @@
 import { Router } from "express";
-import recordsControllers from "../controllers/recordsControllers";
+import recordsControllers from "@src/controllers/recordsControllers";
 
 const router = Router();
 

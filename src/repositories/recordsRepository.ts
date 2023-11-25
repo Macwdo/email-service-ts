@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import Record from "../models/Record";
+import Record from "@src/models/Record";
 
 const records: Record[] = [];
 

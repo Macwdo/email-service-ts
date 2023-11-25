@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
-import { ApiErrorResponse } from "../models/ApiErrorResponse";
-import Record from "../models/Record";
-import recordsRepository from "../repositories/recordsRepository";
+import { ApiErrorResponse } from "@src/models/ApiErrorResponse";
+import Record from "@src/models/Record";
+import recordsRepository from "@src/repositories/recordsRepository";
 
 async function getRecords(
   req: Request,

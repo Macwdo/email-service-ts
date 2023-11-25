@@ -1,9 +1,9 @@
 import express, { NextFunction, Request, Response, json } from "express";
-import recordsRouter from "./routes/recordsRouter";
+import recordsRouter from "@src/routes/recordsRouter";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import { ApiErrorResponse } from "./models/ApiErrorResponse";
+import { ApiErrorResponse } from "@src/models/ApiErrorResponse";
 
 const app = express();
 
