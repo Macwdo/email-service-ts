@@ -6,7 +6,7 @@ const records: Record[] = [];
 
 async function readRecords(): Promise<Record[]> {
   return new Promise((res, rej) => {
-    return res(records);
+    return res(records.sort((a ,b) => a.id - b.id));
   });
 }
 

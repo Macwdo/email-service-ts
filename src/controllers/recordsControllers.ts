@@ -25,7 +25,7 @@ async function getRecord(
     });
   }
 
-  res.send(record);
+  return res.send(record);
 }
 
 async function postRecord(
@@ -36,9 +36,9 @@ async function postRecord(
   const recordRequest: Record = req.body;
   try {
     const record = await recordsRepository.createRecord(recordRequest);
-    res.status(201).send(record);
+    return res.status(201).send(record);
   } catch (error) {
-    next(error);
+    return next(error);
   }
 }
 
@@ -63,9 +63,9 @@ async function putRecord(
       id,
       recordRequest,
     );
-    res.send(updatedRecord);
+    return res.send(updatedRecord);
   } catch (error) {
-    next(error);
+    return next(error);
   }
 }
 
@@ -86,9 +86,9 @@ async function deleteRecord(
 
   try {
     const deletedRecord = await recordsRepository.removeRecord(id);
-    res.send(deletedRecord);
+    return res.send(deletedRecord);
   } catch (error) {
-    next(error);
+    return next(error);
   }
 }
 
